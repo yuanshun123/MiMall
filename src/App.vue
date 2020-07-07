@@ -7,11 +7,28 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import jsonp from 'jsonp'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      dta:null
+    }
+  },
   components: {
     HelloWorld
+  },
+  mounted(){
+    let url="https://www.imooc.com/common/adver-getadver";
+    jsonp(url,(err,res)=>{
+      let resoult=res;
+      this.dta=resoult;
+      console.log(this.dta);
+
+     
+      
+    })
   }
 }
 </script>
