@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import jsonp from 'jsonp'
 
+//import jsonp from 'jsonp'
+import axios from 'axios'
 export default {
   name: 'App',
   data(){
@@ -17,29 +16,29 @@ export default {
     }
   },
   components: {
-    HelloWorld
+   
   },
   mounted(){
-    let url="https://www.imooc.com/common/adver-getadver";
+   // let url="https://www.imooc.com/common/adver-getadver";
+   /*
     jsonp(url,(err,res)=>{
       let resoult=res;
       this.dta=resoult;
-      console.log(this.dta);
-
-     
+      console.log(this.dta); 
       
-    })
+    });*/
+    axios.get('/api/common/adver-getadverlistbymarking?marking=global_newcomer')
+      .then( (response) => {
+        console.log(response);
+     })
+      .catch( (error) => {
+        console.log(error);
+    });
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
 </style>

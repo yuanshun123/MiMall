@@ -1,4 +1,5 @@
 module.exports = {
+  lintOnSave: false,
   devServer:{
     host:'localhost',
     port:8080,
@@ -12,12 +13,5 @@ module.exports = {
       }
     }
   },
-  // publicPath:'/app',
-  // outputDir:'dist',
-  // indexPath:'index2.html',
-  // lintOnSave:false,
-  productionSourceMap:true,
-  chainWebpack:(config)=>{
-    config.plugins.delete('prefetch');
-  }
+  
 }
