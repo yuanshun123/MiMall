@@ -7,10 +7,12 @@ import VueLazyLoad from 'vue-lazyload'
 import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
+import 'swiper/swiper.less'
+import 'swiper/swiper.scss'
+import 'swiper/swiper-bundle.css'
+import 'swiper/swiper-bundle.js'
 import 'wowjs/css/libs/animate.css'
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
 Vue.use(ElementUI);
 Vue.use(VueAxios,axios);
 Vue.use(VueLazyLoad,{

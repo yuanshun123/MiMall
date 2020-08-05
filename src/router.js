@@ -4,6 +4,7 @@ import Home from './pages/home'
 import Index from './pages/index'
 import allshow from './pages/allshow'
 import detailall from './pages/detailall'
+import product from './pages/product.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -19,14 +20,18 @@ export default new Router({
           name: 'index',
           component: Index,
         }, {
-          path: '/product/:id',
+          path: '/product',
           name: 'product',
-          component: () => import('./pages/product.vue')
+          component:product,
         }, {
           path: '/detail/:id',
           name: 'detail',
           component: () => import('./pages/detail.vue')
-        }
+        },{
+          path: '/detailall',
+          name: 'detailall',
+          component:detailall
+        },
       ]
     },
     {
@@ -39,11 +44,7 @@ export default new Router({
       name: 'allshow',
       component:allshow
     },
-    {
-      path: '/detailall',
-      name: 'detailall',
-      component:detailall
-    },
+    
     {
       path: '/cart',
       name: 'cart',

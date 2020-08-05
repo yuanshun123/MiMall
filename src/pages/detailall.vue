@@ -43,7 +43,7 @@
                     <div class="swiper-slide" style="background-image:url(/imgs/details/section5_4.jpg)"></div>
                     <div class="swiper-slide" style="background-image:url(/imgs/details/section5_5.jpg)"></div>
             </div>
-          <div class="swiper-pagination" slot="pagination"></div>
+          <div class="swiper-pagination"></div>
           <div class="detail-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" data-wow-offset="2" style="z-index:2;">
                舒适的手感中，
                 <br>
@@ -64,6 +64,7 @@
 </template>
 <script>
 import WOW from 'wowjs';
+import Swiper from 'swiper/swiper-bundle.js'
 export default {
     data:{
 
@@ -79,12 +80,15 @@ export default {
     wow.init();
       var swiper = new Swiper('.swiper-container', { 
      centeredSlides: true,
-      autoplay:2000, //swiper3.0
-     //autoplay:true,   //swiper4.0
+     // autoplay:2000, //swiper3.0
+       autoplay:true,   //swiper4.0
       effect: 'fade',
-      loop: true,//是否可循环
-
-       pagination:'.swiper-pagination',
+      loop: true, // 循环模式选项
+            // 如果需要分页器
+      pagination: {
+                el: '.swiper-pagination',
+                  clickable: true,
+            },
        direction: 'horizontal',
        paginationClickable: true,
        navigation: {

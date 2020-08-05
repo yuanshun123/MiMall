@@ -288,6 +288,8 @@
   </div>
 </template>
 <script>
+import Swiper from 'swiper/swiper-bundle.js'
+
  export default {
      name: "HeadRotation",
      data () {
@@ -311,9 +313,10 @@
      mounted() {
         new Swiper('.swiper-container', {
           loop:true,
-         
-          nextButton: '.swiper-button-next',
-          prevButton: '.swiper-button-prev',
+          navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
       });
               
     },
