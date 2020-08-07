@@ -37,7 +37,75 @@
                   <span style="font-family:微软雅黑;">麒麟985 5G SoC 旗舰级芯片；前置3200万像素高清自拍，后置6400万变焦四摄，前后双景录像； 新一代OLED极点全面屏；40W超级快充，4000mAh大电池</span>
                 </div>
                 <div class="product-info">
+                    <ul>
+                      <li class="pricefont">价格</li>
+                      <li>
+                        <span><em>¥</em>2999元</span></li>
+                    </ul>
+                    <div style="clear: both;"></div>
+                     <ul>
+                      <li class="pricefont">促销</li>
+                      <li>
+                       <div class="product-prom-item clearfix">
+                         <div class="tag"><em >一站式换新</em></div>
+                         <div class="product-prom-word">
+                            APP专享，最高补贴530元 
+                         </div>
+                       </div>
+                       <div class="product-prom-item clearfix">
+                         <div class="tag"><em >整点赠送</em></div>
+                         <div class="product-prom-word">
+                           0点/10点/16点/20点购买前200名赠100元花币卡（nova系列共用）
+                         </div>
+                       </div>
+                       <div class="product-prom-item clearfix">
+                         <div class="tag"><em >积分双倍抵现</em></div>
+                         <div class="product-prom-word">
+                           积分双倍抵现，最高抵现50元，下单即可使用
+                         </div>
+                       </div>
+                       <div class="product-prom-item clearfix">
+                         <div class="tag"><em >分期免息</em></div>
+                         <div class="product-prom-word">
+                           银联、掌上生活、花呗、工行分期支付可享免息
+                         </div>
+                       </div>
+                       <div class="product-prom-item clearfix">
+                         <div class="tag"><em >赠送积分</em></div>
+                         <div class="product-prom-word">
+                           购买即赠商城积分，积分可抵现~
+                         </div>
+                       </div>
+                      </li>
+                    </ul>
                 </div>
+                 <el-divider></el-divider>
+                 <el-row>
+                    <el-col :span="4"><div class="product-choose ">选择颜色</div></el-col>
+                    <el-col :span="20">
+                      <div class="ulfloat">
+                      <ul>
+                        <li>亮黑色</li>
+                        <li>仲夏紫</li>
+                        <li>奇景森林</li>
+                        <li>密语红</li>
+                      </ul>
+                      </div>
+                    </el-col>
+                </el-row>
+                 <el-row style="margin-top:30px;">
+                    <el-col :span="4"><div class="product-choose ">选择版本</div></el-col>
+                    <el-col :span="20">
+                      <div class="ulfloat">
+                      <ul>
+                        <li>亮黑色</li>
+                        <li>仲夏紫</li>
+                        <li>奇景森林</li>
+                        <li>密语红</li>
+                      </ul>
+                      </div>
+                    </el-col>
+                </el-row>
               </div>
             </el-col>
         </el-row>
@@ -150,9 +218,83 @@ body{
   height: 100px;
 }
 .product-info {
-  margin-top:10px;
+    margin-top:10px;
     background: #f5f5f5;
     padding-top: 14px;
     padding-bottom: 3px;
+    height:140px;
+    margin: 50px;;
+    margin-left:0px;
+    transition:height 0.5s;
+   -webkit-transition:height 0.5s;
+    width: 100%;
+       overflow: hidden;
+   
 }
+
+.product-info:hover{
+  height:180px;
+}
+.product-info ul li{
+  float: left;
+}
+.product-info ul li span{
+  color: #ca141d;
+  font-size: 24px;
+}
+.product-info ul .pricefont{
+  margin-top:5px;
+}
+.product-prom-item{
+  width: 500px;
+}
+.product-prom-item .tag {
+    float: left;
+    line-height: 18px;
+    height: 18px;
+    width: 100px;
+    border: 1px solid #ca141d;
+    padding: 0 6px;
+    min-width: 24px;
+    color: #ca141d;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+em{
+    font-style: normal;
+    font-weight: 400;
+}
+.product-prom-item .product-prom-con {
+    float: right;
+    line-height: 1.5;
+    margin-top: 6px;
+    width: 310px;
+    overflow: hidden;
+ 
+}
+.product-prom-word{
+  font:12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+      color: #3a3a3a;
+     margin-top:5px;
+
+}
+.product-choose {
+  font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+   color: #3a3a3a;
+}
+.ulfloat ul li{
+  float: left;
+ 
+}
+.ulfloat{
+  width: 100%;
+}
+.ulfloat ul li{
+  border: 1px black solid;
+  width: 80px;
+  text-align: center;
+ 
+}
+
 </style>
